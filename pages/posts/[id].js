@@ -69,20 +69,20 @@ export default function Post({ mdxSource }) {
         action='Read'
         link={`#${mdxSource.frontmatter.title.replace(/\s/g, '')}`}
       />
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+
         <div id={mdxSource.frontmatter.title.replace(/\s/g, '')} className='flex justify-center p-12 scroll-my-40 mt-24 mb-12'>
           <Head>
             <title>{mdxSource.frontmatter.title}</title>
           </Head>
 
-          <div className='prose max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto mt-6'>
+          <div className='prose flex flex-col justify-center max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto mt-6'>
             <MDXProvider components={components}>
               <MDXRemote {...mdxSource } components={{...components}} />
             </MDXProvider>
           </div>
           <ScrollToTop />
       </div>
-      </div>
+
     </>
   );
 }
