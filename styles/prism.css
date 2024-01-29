@@ -110,4 +110,5 @@ pre[class*='language-'] {
   border-radius: 0.5rem 0.5rem 0 0;
   border-top: 4px solid theme('colors.indigo.600');
   font-size: 0.8rem;
+  max-width: fit-content;
 }
