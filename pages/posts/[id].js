@@ -77,7 +77,7 @@ export default function Post({ mdxSource }) {
       <div id={mdxSource.frontmatter.title.replace(/\s/g, '')}
         className='flex justify-center p-12 scroll-my-40 mt-24 mb-12'
       >
-        <div className='prose flex flex-col justify-center max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mt-6'>
+        <div className='prose flex flex-col justify-center max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mt-6 px-6'>
           <MDXProvider components={components}>
             <MDXRemote {...mdxSource } components={{...components}} />
           </MDXProvider>

@@ -19,8 +19,8 @@ export default function Hero({ image, heading, message, action, link }) {
         <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/70' />
 
         {/* Hero Content */}
-        <div className='z-0 text-white px-5 text-center max-w-3xl'>
-          <h2 className='text-6xl uppercase p-4'>{ heading }</h2>
+        <div className='z-0 text-white text-center sm:max-w-3xl'>
+          <h2 className='text-3xl sm:text-6xl uppercase'>{ heading }</h2>
           <p className='text-2xl'>{ message }</p>
           <button className={action ? 'px-6 py-1 border mt-4' : 'hidden'}>
             <Link href={link}>
