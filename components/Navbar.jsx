@@ -53,9 +53,9 @@ export default function Navbar() {
             <li className='p-4'>
               <Link href='/blog'>Blog</Link>
             </li>
-            {/* <li className='p-4'>
+            <li className='p-4'>
               <Link href='/contact'>Contact</Link>
-            </li> */}
+            </li>
           </ul>
 
           {/*The Mobile Menu Buttons */}
@@ -88,9 +88,9 @@ export default function Navbar() {
               <li onClick={handleMobileMenu} className='p-4 text-4xl hover:text-white'>
                 <Link href='/blog'>Blog</Link>
               </li>
-              {/* <li onClick={handleMobileMenu} className='p-4 text-4xl hover:text-white'>
+              <li onClick={handleMobileMenu} className='p-4 text-4xl hover:text-white'>
                 <Link href='/contact'>Contact</Link>
-              </li> */}
+              </li>
             </ul>
           </div>
 

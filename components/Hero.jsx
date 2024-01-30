@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from "next/link";
 
-export default function Hero({ image, heading, message, action, link }) {
+export default function Hero({ image, heading, message, action, link, position }) {
   return (
     <>
       {/* Hero Container */}
@@ -11,7 +11,7 @@ export default function Hero({ image, heading, message, action, link }) {
         <Image
           src={image}
           fill='true'
-          className='object-cover object-left'
+          className={`object-cover ${position}`}
           alt='Eugene fishing'
         />
 
@@ -20,8 +20,8 @@ export default function Hero({ image, heading, message, action, link }) {
 
         {/* Hero Content */}
         <div className='z-0 text-white text-center sm:max-w-3xl'>
-          <h2 className='text-3xl sm:text-6xl uppercase'>{ heading }</h2>
-          <p className='text-2xl'>{ message }</p>
+          <h2 className='text-4xl sm:text-6xl uppercase p-4'>{ heading }</h2>
+          <p className={message ? 'text-2xl' : 'hidden'}>{ message }</p>
           <button className={action ? 'px-6 py-1 border mt-4' : 'hidden'}>
             <Link href={link}>
               { action }

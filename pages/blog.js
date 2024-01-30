@@ -19,8 +19,7 @@ export default function Blog({ allPostsData }) {
       <Hero
         image={heroBackgroundImageBlog}
         heading='Blog'
-        message='Written notes and thoughts'
-        action='Look at posts'
+        action='View Posts'
         link='#posts'
       />
       <div id='posts' className='scroll-my-40 mt-24 mb-12'>
@@ -29,7 +28,7 @@ export default function Blog({ allPostsData }) {
         <div className='flex flex-wrap h-screen justify-evenly'>
           {
             allPostsData.map(({ id, date, title }) => (
-              <Link href={`/posts/${id}`} className='flex flex-col justify-center text-center p-12 bg-black hover:bg-black/80 text-white w-1/4 h-64 min-w-96 m-10'>
+              <Link href={`/posts/${id}`} className='flex flex-col justify-center text-center p-12 border hover:bg-black/10 w-1/4 h-64 min-w-96 m-10'>
                 {title}
                 <small>
                   <Date dateString={date} />

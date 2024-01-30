@@ -15,9 +15,16 @@ export default function Home() {
         image={heroBackgroundImageHome}
         heading='Eugene Kim'
         message='Software Engineer'
-        action='Contact me'
-        link=''
+        action='About me'
+        link='#aboutMe'
+        position='object-left'
       />
+      <div id='aboutMe' className='relative flex h-screen items-center justify-center'>
+        <h1 className='absolute top-40 text-4xl font-bold text-center mb-12'>About Me</h1>
+        <div className='flex max-w-4xl justify-between'>
+          
+        </div>
+      </div>
     </>
   )
 }
