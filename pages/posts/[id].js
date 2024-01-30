@@ -45,7 +45,7 @@ const customHeadingThree = function({ id, ...props }) {
     return (
       <>
         <Link href={`#${id}`}>
-          <h3 id={ id } { ...props } />
+          <h3 id={ id } { ...props } className='scroll-my-24'/>
         </Link>
       </>
     );
@@ -75,9 +75,9 @@ export default function Post({ mdxSource }) {
       />
 
       <div id={mdxSource.frontmatter.title.replace(/\s/g, '')}
-        className='flex justify-center p-12 scroll-my-40 mt-24 mb-12'
+        className='flex justify-center p-12 mb-12 scroll-my-16'
       >
-        <div className='prose flex flex-col justify-center max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl mt-6 px-6'>
+        <div className='prose flex flex-col justify-center max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl px-6'>
           <MDXProvider components={components}>
             <MDXRemote {...mdxSource } components={{...components}} />
           </MDXProvider>

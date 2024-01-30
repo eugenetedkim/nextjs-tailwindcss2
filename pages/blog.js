@@ -23,12 +23,12 @@ export default function Blog({ allPostsData }) {
         link='#posts'
       />
       <div id='posts' className='scroll-my-40 mt-24 mb-12'>
-       <h1 className='text-4xl font-bold text-center mb-12'>Posts</h1>
+       <h1 className='text-4xl font-bold text-center mb-24'>Posts</h1>
         {/* Outer flex container */}
-        <div className='flex flex-wrap h-screen justify-evenly'>
+        <div className='flex flex-wrap h-fit justify-evenly'>
           {
             allPostsData.map(({ id, date, title }) => (
-              <Link href={`/posts/${id}`} className='flex flex-col justify-center text-center p-12 border hover:bg-black/10 w-1/4 h-64 min-w-96 m-10'>
+              <Link href={`/posts/${id}`} className='flex flex-col justify-center text-center p-12 border hover:bg-black/10 w-1/4 h-64 min-w-80 sm:min-w-96 mb-12'>
                 {title}
                 <small>
                   <Date dateString={date} />
