@@ -79,12 +79,6 @@ export default function Navbar() {
               <li onClick={handleMobileMenu} className='p-4 text-4xl hover:text-white'>
                 <Link href='/'>Home</Link>
               </li>
-              {/* <li onClick={handleMobileMenu} className='p-4 text-4xl hover:text-white'>
-                <Link href='/about'>About</Link>
-              </li>
-              <li onClick={handleMobileMenu} className='p-4 text-4xl hover:text-white'>
-                <Link href='/work'>Work</Link>
-              </li> */}
               <li onClick={handleMobileMenu} className='p-4 text-4xl hover:text-white'>
                 <Link href='/blog'>Blog</Link>
               </li>
