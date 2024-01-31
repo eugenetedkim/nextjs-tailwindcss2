@@ -19,12 +19,10 @@ export default function ContactForm() {
     }
     
     const res = await fetch("https://eugenetedkim.com/api/send", {
+      mode: "no-cors",
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With",
       },
       body: JSON.stringify(data)
     });
