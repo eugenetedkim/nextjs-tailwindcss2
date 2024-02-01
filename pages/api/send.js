@@ -1,13 +1,14 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 import EmailTemplate from '../../components/EmailTemplate';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async (req, res) => {
-  const requestBody = req.body;
+export default async (NextApiRequest, NextApiResponse) => {
+  const requestBody = NextApiRequest.body;
   console.log(requestBody);
-  console.log(req.method);
-  if (req.method == 'POST') {
+  console.log(NextApiRequest.method);
+  if (NextApiRequest.method == 'POST') {
 
     const firstName = requestBody.firstName;
     const lastName = requestBody.lastName;
@@ -23,9 +24,9 @@ export default async (req, res) => {
     });
   
     if (error) {
-      return res.status(400).json(error);
+      return NextApiResponse.status(400).json(error);
     }
   
-    res.status(200).json(data);
+    NextApiResponse.status(200).json(data);
   }
 };
