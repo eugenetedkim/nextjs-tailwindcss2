@@ -20,10 +20,11 @@ export default function ContactForm() {
     
     const res = await fetch("/api", {
       method: "POST",
-      // headers: {
-      //   "Content-Type": "application/json",
-      // },
-      body: data
+      headers: {
+        "Content-Type": "application/json",
+        "Allow": "POST",
+      },
+      body: JSON.stringify(data)
     });
 
     if (res.status === 200) {
