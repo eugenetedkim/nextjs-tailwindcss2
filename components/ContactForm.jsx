@@ -18,7 +18,7 @@ export default function ContactForm() {
       firstName, lastName, email, message
     }
     
-    const res = await fetch("https://eugenetedkim.com/api/send", {
+    const res = await fetch("/api/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
