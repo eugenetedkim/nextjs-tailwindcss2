@@ -19,8 +19,8 @@ export default function ContactForm() {
     }
     
     const res = await fetch("/api", {
-      method: "POST",
-      mode: "cors",
+      // method: "POST",
+      // mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
