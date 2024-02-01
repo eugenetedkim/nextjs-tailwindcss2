@@ -23,7 +23,7 @@ export default function ContactForm() {
       // headers: {
       //   "Content-Type": "application/json",
       // },
-      body: JSON.stringify(data)
+      body: data
     });
 
     if (res.status === 200) {
