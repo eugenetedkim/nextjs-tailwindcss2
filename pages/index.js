@@ -33,8 +33,10 @@ export default function Home() {
               quality={100}
             />
           </div>
-          <div className='relative h-64 w-64 flex items-center text-center sm:text-left sm:ml-4'>
-            <p className='text-lg'>My name is Eugene Kim and I'm a software engineer at Fulgent Genetics. I solve problems across the stack building solutions for accurate and efficient data processing, exchange, and presentation.</p>
+          <div className='relative h-64 w-80 flex flex-col text-left sm:ml-4 p-1 mt-6 xs:mt-0'>
+            <p className='text-lg inline'>My name is <span className='font-bold'>Eugene Kim</span></p>
+            <p className='text-lg'>and I'm a <span className='font-medium'>software engineer</span> at <a className='font-medium text-blue-600 hover:text-blue-600 visited:text-blue-800' href='https://fulgentgenetics.com/' target='_blank'>Fulgent Genetics</a>.</p><br/>
+            <p className='text-lg'>I solve problems across the stack building solutions for accurate and efficient data processing, exchange, and presentation.</p>
           </div>
         </div>
       </div>
