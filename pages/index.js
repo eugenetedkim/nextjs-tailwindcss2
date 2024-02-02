@@ -30,7 +30,8 @@ export default function Home() {
               alt='profile'
               fill
               className='object-cover'
-              quality={100}
+              priority
+              unoptimized={true}
             />
           </div>
           <div className='relative h-64 w-80 flex flex-col text-left sm:ml-4 p-1 mt-6 xs:mt-0'>
