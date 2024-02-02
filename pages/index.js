@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Hero from '../components/Hero';
 import heroBackgroundImageHome from '../public/images/convictlake.jpg';
+import Image from "next/image";
+import headShotImage from '../public/images/profile.jpg';
 
 export default function Home() {
   return (
@@ -19,10 +21,21 @@ export default function Home() {
         link='#aboutMe'
         position='object-left'
       />
-      <div id='aboutMe' className='relative flex h-screen items-center justify-center'>
-        <h1 className='absolute top-40 text-4xl font-bold text-center mb-12'>About Me</h1>
-        <div className='flex max-w-4xl justify-between'>
-          
+      <div id='aboutMe' className='flex flex-col h-screen items-center w-full justify-start pt-24'>
+        <h1 className='text-4xl font-bold'>About Me</h1>
+        <div className='flex flex-wrap justify-center items-center p-4 mt-12'>
+          <div className='relative h-64 w-64 sm:mr-4'>
+            <Image
+              src={headShotImage}
+              alt='profile'
+              fill
+              className='object-cover'
+              quality={100}
+            />
+          </div>
+          <div className='relative h-64 w-64 flex items-center text-center sm:text-left sm:ml-4'>
+            <p className='text-lg'>My name is Eugene Kim and I'm a software engineer at Fulgent Genetics. I solve problems across the stack building solutions for accurate and efficient data processing, exchange, and presentation.</p>
+          </div>
         </div>
       </div>
     </>

@@ -7,9 +7,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Toaster
-        position='top-center'
+        position='bottom-right'
         toastOptions={{
-          duration: 100000,
+          duration: 7000,
           style: {
             background: 'black',
             color: 'white'
