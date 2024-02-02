@@ -36,9 +36,9 @@ export default function ContactForm() {
   }
 
   return (
-    <div id='emailMe' className='relative flex flex-col h-screen items-center justify-center'>
+    <div id='emailMe' className='relative flex flex-col h-screen items-center justify-center '>
       <h1 className='text-4xl font-bold text-center mb-12'>Email Me</h1>
-      <form id='emailForm' onSubmit={sendEmail} className='w-1/2'>
+      <form id='emailForm' onSubmit={sendEmail} className='w-full p-6 sm:w-1/3'>
 
         <label className='block'>
           <span>First Name</span>
@@ -93,10 +93,12 @@ export default function ContactForm() {
           />
         </label>
 
-        <button onClick={sendEmail} className='px-6 py-1 border mt-4'>
-          Send
-        </button>
       </form>
+
+      <button onClick={sendEmail} className='px-6 py-1 border transition duration-300 ease-in-out hover:scale-110'>
+        Send
+      </button>
+
     </div>
   )
 }

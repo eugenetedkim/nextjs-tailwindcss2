@@ -22,7 +22,7 @@ export default function Hero({ image, heading, message, action, link, position }
         <div className='z-0 text-white text-center sm:max-w-3xl'>
           <h2 className='text-4xl sm:text-6xl uppercase p-4'>{ heading }</h2>
           <p className={message ? 'text-2xl' : 'hidden'}>{ message }</p>
-          <button className={action ? 'px-6 py-1 border mt-4' : 'hidden'}>
+          <button className={action ? 'px-6 py-1 border mt-4 transition duration-300 ease-in-out hover:scale-110' : 'hidden'}>
             <Link href={link}>
               { action }
             </Link>
