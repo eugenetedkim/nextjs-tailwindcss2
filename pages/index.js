@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Hero from '../components/Hero';
 import heroBackgroundImageHome from '../public/images/convictlake.jpg';
-import Image from "next/image";
-import headShotImage from '../public/images/profile.jpg';
+import AboutMe from "../components/AboutMe";
 
 export default function Home() {
   return (
@@ -21,7 +20,8 @@ export default function Home() {
         link='#aboutMe'
         position='object-left'
       />
-      <div id='aboutMe' className='flex flex-col h-screen items-center w-full justify-start pt-24'>
+      <AboutMe/>
+      {/* <div id='aboutMe' className='flex flex-col h-screen items-center w-full justify-start pt-24'>
         <h1 className='text-4xl font-bold'>About Me</h1>
         <div className='flex flex-wrap justify-center items-center p-4 mt-12'>
           <div className='relative h-64 w-64 sm:mr-4'>
@@ -40,7 +40,7 @@ export default function Home() {
             <p className='text-lg'>I solve problems across the stack by building solutions for accurate and efficient data processing, exchange, and presentation.</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
