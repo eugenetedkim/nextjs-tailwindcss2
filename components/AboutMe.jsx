@@ -11,8 +11,8 @@ export default function AboutMe() {
           {/* Grid Container */}
           <div className='flex flex-col sm:grid sm:grid-cols-12 sm:grid-rows-5 sm:justify-center sm:items-center mx-12 sm:m-24'>
             {/* Grid Item 1 */}
-            <div className='order-1 sm:col-start-5 sm:col-span-4 sm:row-start-1 sm:row-span-1 sm:sm:text-center p-2'>
-              <p className='text-lg'>My name is <span className='font-semibold'>Eugene Kim</span> and I'm a <span className='font-medium'>full-stack software engineer</span> at <a className='font-medium text-blue-600 hover:text-blue-600 visited:text-blue-800' href='https://fulgentgenetics.com/' target='_blank'>Fulgent Genetics</a> .</p>
+            <div className='order-2 sm:col-start-5 sm:col-span-4 sm:row-start-1 sm:row-span-1 sm:sm:text-center p-2'>
+              <p className='text-lg'>My name is <span className='font-semibold'>Eugene Kim </span> and I'm a <span className='font-medium'>software engineer</span> at <a className='font-medium text-blue-600 hover:text-blue-600 visited:text-blue-800' href='https://fulgentgenetics.com/' target='_blank'>Fulgent Genetics</a> .</p>
             </div>
             {/* Grid Item 2 */}
             <div class='order-3 sm:col-start-1 sm:col-span-4 sm:row-start-2 sm:row-span-2 sm:text-center p-2'>
@@ -20,7 +20,7 @@ export default function AboutMe() {
               <p className='text-lg'>I solve problems through code to ensure data accuracy and readiness which business operations depends on.</p>
             </div>
             {/* Grid Item 3 */}
-            <div className='mt-12 mb-12 mx-auto sm:mb-0 order-2 sm:col-start-5 sm:col-span-4 sm:row-start-2 sm:row-span-4'>
+            <div className='mt-12 mb-12 mx-auto sm:mb-0 order-1 sm:col-start-5 sm:col-span-4 sm:row-start-2 sm:row-span-4'>
               <Image
                 src={meImage}
                 alt='me'
