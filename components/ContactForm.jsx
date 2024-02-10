@@ -65,7 +65,6 @@ export default function ContactForm() {
 
         <label className='block'>
           <span>First Name</span>
-          {errors['firstName'] && <p className='text-red-500 text-xs inline'> {errors['firstName']}</p>}
           <input
             id='firstName'
             autoComplete='true'
@@ -74,12 +73,12 @@ export default function ContactForm() {
             onChange={(e) => setFirstName(e.target.value)}
             className='border w-full mb-4'
             value={firstName}
+            placeholder={errors['firstName'] ? errors['firstName'] : ''}
           />
         </label>
 
         <label className='block'>
           <span>Last Name</span>
-          {errors['lastName'] && <p className='text-red-500 text-xs inline'> {errors['lastName']}</p>}
           <input
             id='lastName'
             autoComplete='true'
@@ -88,12 +87,12 @@ export default function ContactForm() {
             onChange={(e) => setLastName(e.target.value)}
             className='border w-full mb-4'
             value={lastName}
+            placeholder={errors['lastName'] ? errors['lastName'] : ''}
           />
         </label>
 
         <label className='block'>
           <span>Email</span>
-          {errors['email'] && <p className='text-red-500 text-xs inline'> {errors['email']}</p>}
           <input
             id='email'
             autoComplete='true'
@@ -102,12 +101,12 @@ export default function ContactForm() {
             onChange={(e) => setEmail(e.target.value)}
             className='border w-full mb-4'
             value={email}
+            placeholder={errors['email'] ? errors['email'] : ''}
           />
         </label>
 
         <label className='block'>
           <span>Message</span>
-          {errors['message'] && <p className='text-red-500 text-xs inline'> {errors['message']}</p>}
           <textarea
             id='message'
             autoComplete='true'
@@ -117,6 +116,7 @@ export default function ContactForm() {
             onChange={(e) => setMessage(e.target.value)}
             className='border w-full mb-4'
             value={message}
+            placeholder={errors['message'] ? errors['message'] : ''}
           />
         </label>
 
