@@ -5,7 +5,7 @@ import { Toaster } from 'react-hot-toast';
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <div>
       <Toaster
         position='bottom-right'
         toastOptions={{
@@ -19,6 +19,6 @@ export default function App({ Component, pageProps }) {
       <Navbar />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </div>
   );
 }

@@ -2,9 +2,9 @@ import Hero from "../components/Hero";
 import heroBackgroundImageContact from '../public/images/message.jpeg';
 import ContactForm from "../components/ContactForm";
 
-export default function Blog() {
+export default function Contact() {
   return (
-    <>
+    <div className='md:h-screen'>
       <Hero
         image={heroBackgroundImageContact}
         heading='Contact'
@@ -12,6 +12,6 @@ export default function Blog() {
         link='#emailMe'
       />
       <ContactForm />
-  </>
+  </div>
   );
 }

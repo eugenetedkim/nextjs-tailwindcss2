@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <>
       {/* The Navigation Bar Outer Container */}
-      <div className={`${backgroundColor} fixed left-0 top-0 w-full z-10 ease-in duration-300`}>
+      <div className={`${backgroundColor} absolute left-0 top-0 w-full z-10 ease-in duration-300`}>
 
         {/*The Navigation Bar Inner Container */}
         <div className='max-w-[1240px] m-auto flex justify-between items-center p-4'>

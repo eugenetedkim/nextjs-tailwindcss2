@@ -8,7 +8,10 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     scrollRestoration: true,
-  }
+  },
+  fs: false,
+  path: false,
+
 }
 
 const withMDX = nextMDX.default({
