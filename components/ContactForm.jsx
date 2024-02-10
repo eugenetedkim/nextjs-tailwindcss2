@@ -21,9 +21,9 @@ export default function ContactForm() {
     if (!firstName) errors['firstName'] = 'Please enter your first name';
     if (!lastName) errors['lastName'] = 'Please enter your last name';
     if (!email) {
-      errors['email'] = 'Please enter your email';
+      errors['email1'] = 'Please enter your email';
     } else if (!/\S+@\S+/.test(email)) {
-      errors['email'] = 'Please enter a valid email';
+      errors['email2'] = 'Please enter a valid email';
     }
     if (!message) errors['message'] = 'Please enter your message';
     setErrors(errors);
@@ -93,6 +93,7 @@ export default function ContactForm() {
 
         <label className='block'>
           <span>Email</span>
+          {errors['email2'] && <p className='text-red-500 text-xs inline'> {errors['email2']}</p>}
           <input
             id='email'
             autoComplete='true'
@@ -101,7 +102,7 @@ export default function ContactForm() {
             onChange={(e) => setEmail(e.target.value)}
             className='border w-full mb-4'
             value={email}
-            placeholder={errors['email'] ? errors['email'] : ''}
+            placeholder={errors['email1'] ? errors['email1'] : ''}
           />
         </label>
 
