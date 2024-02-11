@@ -61,6 +61,7 @@ export default function ContactForm() {
   return (
     <div id='emailMe' className='flex flex-col h-screen landscape:h-full landscape:mt-24 portrait:h-screen items-center justify-center p-6'>
       <h1 className='text-4xl font-bold text-center mb-12'>Email Me</h1>
+      <p className='text-lg w-full sm:w-2/3 mb-6'>Please use this form or email me at <a className='font-medium text-blue-600 hover:text-blue-600 visited:text-blue-800' href='mailto:eugenetedkim@gmail.com'>eugenetedkim@gmail.com</a> to contact me.</p>
       <form id='emailForm' onSubmit={sendEmail} className='w-full sm:w-2/3'>
 
         <label className='block'>

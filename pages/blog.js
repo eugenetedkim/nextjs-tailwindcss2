@@ -14,7 +14,7 @@ export async function getStaticProps() {
 
 export default function Blog(props) {
   return (
-    <div className='md:h-screen'>
+    <div className='h-full'>
       <Hero
         image={heroBackgroundImageBlog}
         heading='Blog'

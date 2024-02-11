@@ -54,6 +54,9 @@ export default function Navbar() {
               <Link href='/blog'>Blog</Link>
             </li>
             <li className='p-4'>
+              <Link href='/resume'>Resume</Link>
+            </li>
+            <li className='p-4'>
               <Link href='/contact'>Contact</Link>
             </li>
           </ul>
@@ -81,6 +84,9 @@ export default function Navbar() {
               </li>
               <li onClick={handleMobileMenu} className='p-4 text-4xl hover:text-white'>
                 <Link href='/blog'>Blog</Link>
+              </li>
+              <li onClick={handleMobileMenu} className='p-4 text-4xl hover:text-white'>
+                <Link href='/resume'>Resume</Link>
               </li>
               <li onClick={handleMobileMenu} className='p-4 text-4xl hover:text-white'>
                 <Link href='/contact'>Contact</Link>
