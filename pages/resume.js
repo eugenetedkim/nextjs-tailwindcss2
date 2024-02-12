@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import heroBackgroundImageResume from '../public/images/convictlake.jpg';
+import heroBackgroundImageResume from '../public/images/moves.jpg';
 import MyResume from "../components/MyResume";
 
 export default function Resume() {

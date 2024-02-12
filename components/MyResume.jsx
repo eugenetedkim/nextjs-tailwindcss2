@@ -1,7 +1,24 @@
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
 export default function MyResume() {
   return (
-    <section id='myResume' className='h-screen landscape:h-full landscape:mt-24 portrait:h-full w-full'>
-      <div className='flex flex-col gap-4 p-6 sm:mx-12'>
+    <section id='myResume' className='h-screen landscape:h-full landscape:mt-24 portrait:h-full w-full mb-12 sm:max-w-screen-lg sm:mx-auto'>
+
+      <div className='flex px-6 sm:mx-12 justify-between mb-12'>
+        <div className='flex gap-2 justify-center items-center'>
+          <a href='https://www.linkedin.com/in/eugenetedkim/' target='_blank'>
+            <FaLinkedin size={30} />
+          </a>
+          <a href='https://github.com/eugenetedkim' target='_blank'>
+            <FaGithub size={30} />
+          </a>
+        </div>
+        <a href='/resumeEugeneKim.pdf' target='_blank' rel='noopener noreferrer' download>
+          <button className='border rounded-sm px-4'>Download</button>
+        </a>
+      </div>
+
+      <div className='flex flex-col gap-4 px-6 sm:mx-12'>
         {/* Experience */}
         <div>
           <p className='text-2xl font-bold mb-2'>Experience</p>

@@ -124,7 +124,7 @@ export default function ContactForm() {
 
       </form>
 
-      <button onClick={sendEmail} className='px-6 py-1 border transition duration-300 ease-in-out hover:scale-110'>
+      <button onClick={sendEmail} className='px-4 border rounded-sm transition duration-300 ease-in-out hover:scale-110'>
         Send
       </button>
 
