@@ -2,7 +2,11 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function MyResume() {
   return (
-    <section id='myResume' className='h-screen landscape:h-full landscape:mt-24 portrait:h-full w-full mb-12 sm:max-w-screen-lg sm:mx-auto'>
+    <section id='myResume' className='relative flex flex-col h-auto justify-between'>
+      {/* Heading */}
+      <div className='flex justify-center items-center mt-24 mb-16 lg:mb-0'>
+        <h1 className='text-center text-4xl font-bold'>Eugene Kim</h1>
+      </div>
 
       <div className='flex px-6 sm:mx-12 justify-between mb-12'>
         <div className='flex gap-2 justify-center items-center'>

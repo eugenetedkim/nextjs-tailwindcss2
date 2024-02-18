@@ -14,7 +14,7 @@ export async function getStaticProps() {
 
 export default function Blog(props) {
   return (
-    <div className='h-full'>
+    <div className='relative mb-12'>
       <Hero
         image={heroBackgroundImageBlog}
         heading='Blog'

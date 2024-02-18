@@ -18,14 +18,14 @@ export default function ContactForm() {
 
   const validateForm = () => {
     const errors = {};
-    if (!firstName) errors['firstName'] = 'Please enter your first name';
-    if (!lastName) errors['lastName'] = 'Please enter your last name';
+    if (!firstName) errors['firstName'] = ' Please enter your first name';
+    if (!lastName) errors['lastName'] = ' Please enter your last name';
     if (!email) {
-      errors['email1'] = 'Please enter your email';
+      errors['email1'] = ' Please enter your email';
     } else if (!/\S+@\S+/.test(email)) {
       errors['email2'] = 'Please enter a valid email';
     }
-    if (!message) errors['message'] = 'Please enter your message';
+    if (!message) errors['message'] = ' Please enter your message';
     setErrors(errors);
     setIsFormValid(Object.keys(errors).length === 0);
   };
@@ -59,75 +59,81 @@ export default function ContactForm() {
   }
 
   return (
-    <div id='emailMe' className='flex flex-col h-screen landscape:h-full landscape:mt-24 portrait:h-screen items-center justify-center p-6'>
-      <h1 className='text-4xl font-bold text-center mb-12'>Email Me</h1>
-      <p className='text-lg w-full sm:w-2/3 mb-6'>Please use this form or email me at <a className='font-medium text-blue-600 hover:text-blue-600 visited:text-blue-800' href='mailto:eugenetedkim@gmail.com'>eugenetedkim@gmail.com</a> to contact me.</p>
-      <form id='emailForm' onSubmit={sendEmail} className='w-full sm:w-2/3'>
+    <div id='emailMe' className='relative flex flex-col h-screen gap-12 px-4'>
 
-        <label className='block'>
-          <span>First Name</span>
-          <input
-            id='firstName'
-            autoComplete='true'
-            required
-            type='text'
-            onChange={(e) => setFirstName(e.target.value)}
-            className='border w-full mb-4'
-            value={firstName}
-            placeholder={errors['firstName'] ? errors['firstName'] : ''}
-          />
-        </label>
+      {/* Heading */}
+      <div className='flex justify-center items-center mt-24 lg:mb-0'>
+        <h1 className='text-center text-4xl font-bold'>Email Me</h1>
+      </div>
 
-        <label className='block'>
-          <span>Last Name</span>
-          <input
-            id='lastName'
-            autoComplete='true'
-            required
-            type='text'
-            onChange={(e) => setLastName(e.target.value)}
-            className='border w-full mb-4'
-            value={lastName}
-            placeholder={errors['lastName'] ? errors['lastName'] : ''}
-          />
-        </label>
+      <div className='flex flex-col justify-center items-center'>
+        <p className='text-lg w-full sm:w-2/3 mb-6'>Please use this form or email me at <a className='font-medium text-blue-600 hover:text-blue-600 visited:text-blue-800' href='mailto:eugenetedkim@gmail.com'>eugenetedkim@gmail.com</a> to contact me.</p>
+        <form id='emailForm' onSubmit={sendEmail} className='w-full sm:w-2/3'>
 
-        <label className='block'>
-          <span>Email</span>
-          {errors['email2'] && <p className='text-red-500 text-xs inline'> {errors['email2']}</p>}
-          <input
-            id='email'
-            autoComplete='true'
-            required
-            type='text'
-            onChange={(e) => setEmail(e.target.value)}
-            className='border w-full mb-4'
-            value={email}
-            placeholder={errors['email1'] ? errors['email1'] : ''}
-          />
-        </label>
+          <label className='block'>
+            <span>First Name</span>
+            <input
+              id='firstName'
+              autoComplete='true'
+              required
+              type='text'
+              onChange={(e) => setFirstName(e.target.value)}
+              className='border w-full mb-4'
+              value={firstName}
+              placeholder={errors['firstName'] ? errors['firstName'] : ''}
+            />
+          </label>
 
-        <label className='block'>
-          <span>Message</span>
-          <textarea
-            id='message'
-            autoComplete='true'
-            required
-            type='text'
-            rows='8'
-            onChange={(e) => setMessage(e.target.value)}
-            className='border w-full mb-4'
-            value={message}
-            placeholder={errors['message'] ? errors['message'] : ''}
-          />
-        </label>
+          <label className='block'>
+            <span>Last Name</span>
+            <input
+              id='lastName'
+              autoComplete='true'
+              required
+              type='text'
+              onChange={(e) => setLastName(e.target.value)}
+              className='border w-full mb-4'
+              value={lastName}
+              placeholder={errors['lastName'] ? errors['lastName'] : ''}
+            />
+          </label>
 
-      </form>
+          <label className='block'>
+            <span>Email</span>
+            {errors['email2'] && <p className='text-red-500 text-xs inline'> {errors['email2']}</p>}
+            <input
+              id='email'
+              autoComplete='true'
+              required
+              type='text'
+              onChange={(e) => setEmail(e.target.value)}
+              className='border w-full mb-4'
+              value={email}
+              placeholder={errors['email1'] ? errors['email1'] : ''}
+            />
+          </label>
 
-      <button onClick={sendEmail} className='px-4 border rounded-sm transition duration-300 ease-in-out hover:scale-110'>
-        Send
-      </button>
+          <label className='block'>
+            <span>Message</span>
+            <textarea
+              id='message'
+              autoComplete='true'
+              required
+              type='text'
+              rows='8'
+              onChange={(e) => setMessage(e.target.value)}
+              className='border w-full mb-4'
+              value={message}
+              placeholder={errors['message'] ? errors['message'] : ''}
+            />
+          </label>
 
+        </form>
+
+        <button onClick={sendEmail} className='px-4 border rounded-sm transition duration-300 ease-in-out hover:scale-110 mb-12'>
+          Send
+        </button>
+      </div>
     </div>
   )
 }

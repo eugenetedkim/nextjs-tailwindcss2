@@ -4,7 +4,7 @@ import MyResume from "../components/MyResume";
 
 export default function Resume() {
   return (
-    <div className='h-full'>
+    <div className='relative mb-12'>
       <Hero
         image={heroBackgroundImageResume}
         heading='Resume'

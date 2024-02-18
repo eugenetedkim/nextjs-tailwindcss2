@@ -4,7 +4,7 @@ import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
   return (
-    <div className='h-full'>
+    <div className='relative mb-12'>
       <Hero
         image={heroBackgroundImageContact}
         heading='Contact'

@@ -21,26 +21,6 @@ export default function Home() {
         position='object-left'
       />
       <AboutMe/>
-      {/* <div id='aboutMe' className='flex flex-col h-screen items-center w-full justify-start pt-24'>
-        <h1 className='text-4xl font-bold'>About Me</h1>
-        <div className='flex flex-wrap justify-center items-center p-4 mt-12'>
-          <div className='relative h-64 w-64 sm:mr-4'>
-            <Image
-              src={headShotImage}
-              alt='profile'
-              fill
-              className='object-cover'
-              priority
-              unoptimized={true}
-            />
-          </div>
-          <div className='relative h-64 w-80 flex flex-col text-left sm:ml-4 p-1 mt-6 xs:mt-0'>
-            <p className='text-lg inline'>My name is <span className='font-bold'>Eugene Kim</span></p>
-            <p className='text-lg'>and I'm a <span className='font-medium'>software engineer</span> at <a className='font-medium text-blue-600 hover:text-blue-600 visited:text-blue-800' href='https://fulgentgenetics.com/' target='_blank'>Fulgent Genetics</a>.</p><br/>
-            <p className='text-lg'>I solve problems across the stack by building solutions for accurate and efficient data processing, exchange, and presentation.</p>
-          </div>
-        </div>
-      </div> */}
     </div>
   )
 }

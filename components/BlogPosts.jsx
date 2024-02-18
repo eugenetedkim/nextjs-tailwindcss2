@@ -3,8 +3,12 @@ import Date from '../components/Date';
 
 export default function BlogPosts({ allPostsData }) {
   return (
-    <div id='posts' className='flex flex-col h-screen landscape:h-full landscape:mt-24 portrait:h-full items-center justify-center p-6'>
-      <h1 className='text-4xl font-bold text-center mb-12'>Posts</h1>
+    <section id='posts' className='relative flex flex-col h-screen gap-12 px-4'>
+
+      {/* Heading */}
+      <div className='flex justify-center items-center mt-24 lg:mb-0'>
+        <h1 className='text-center text-4xl font-bold'>Posts</h1>
+      </div>
 
       {/* Outer flex container */}
       <div className='flex flex-wrap h-fit justify-evenly'>
@@ -21,6 +25,6 @@ export default function BlogPosts({ allPostsData }) {
           ))
         }
       </div>
-    </div>
+    </section>
   )
 }
