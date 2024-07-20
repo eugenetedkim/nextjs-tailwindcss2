@@ -16,8 +16,8 @@ export default function Footer() {
   });
 
   return (
-    <footer className={isFooterVisible ? 'w-full fixed bottom-0' : 'hidden'}>
-      <div className='flex justify-center'>
+    <footer className={isFooterVisible ? 'w-full h-32' : 'hidden'}>
+      <div className='flex justify-center h-full items-end'>
           <p>
             © 2024 <Link href='/' className="hover:underline"> eugenetedkim.com</Link>
           </p>

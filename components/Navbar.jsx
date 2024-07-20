@@ -44,12 +44,9 @@ export default function Navbar() {
           
           {/*The Navigation Bar Links */}
           <ul className={`${textColor} hidden sm:flex`}>
-            {/* <li className='p-4'>
-              <Link href='/about'>About</Link>
-            </li>
             <li className='p-4'>
-              <Link href='/work'>Work</Link>
-            </li> */}
+              <Link href='/'>About Me</Link>
+            </li>
             <li className='p-4'>
               <Link href='/blog'>Blog</Link>
             </li>
@@ -80,7 +77,7 @@ export default function Navbar() {
           }>
             <ul>
               <li onClick={handleMobileMenu} className='p-4 text-4xl hover:text-white'>
-                <Link href='/'>Home</Link>
+                <Link href='/'>About Me</Link>
               </li>
               <li onClick={handleMobileMenu} className='p-4 text-4xl hover:text-white'>
                 <Link href='/blog'>Blog</Link>
